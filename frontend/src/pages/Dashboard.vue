@@ -118,7 +118,6 @@
     </div>
 
     <div class="w-full overflow-y-scroll">
-      <GBSEvolutionTable />
       <DashboardGrid
         v-if="!dashboardItems.loading && dashboardItems.data"
         v-model="dashboardItems.data"
@@ -136,7 +135,6 @@
 
 <script setup lang="ts">
 import AddChartModal from '@/components/Dashboard/AddChartModal.vue'
-import GBSEvolutionTable from '@/components/Dashboard/GBSEvolutionTable.vue'
 import LucideRefreshCcw from '~icons/lucide/refresh-ccw'
 import LucideUndo2 from '~icons/lucide/undo-2'
 import LucidePenLine from '~icons/lucide/pen-line'
