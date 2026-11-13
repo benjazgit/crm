@@ -1,7 +1,8 @@
 <template>
   <div class="h-full w-full">
+    <GBSSourceTable v-if="item.name === 'gbs_leads_sources'" />
     <div
-      v-if="item.type == 'number_chart'"
+      v-else-if="item.type == 'number_chart'"
       class="flex h-full w-full overflow-hidden cursor-pointer"
     >
       <Tooltip :text="__(item.data.tooltip)">
@@ -34,6 +35,7 @@
 </template>
 <script setup lang="ts">
 import { Tooltip } from 'frappe-ui'
+import GBSSourceTable from '@/components/Dashboard/GBSSourceTable.vue'
 import {
   AreaChart,
   BarChart,
